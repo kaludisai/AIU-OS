@@ -7,11 +7,11 @@ errors=[]
 for name in required:
     if not (ROOT/name).is_file(): errors.append('Missing '+name)
 if (ROOT/'CLAUDE.md').read_bytes()!=(ROOT/'AGENTS.md').read_bytes(): errors.append('Operating maps differ')
-for name in ['setup-workspace','plan-one-task','check-work','refine-workflow']:
+for name in ['setup-workspace','plan-one-task','check-work','refine-workflow','capture-context','find-context']:
     a=ROOT/'.claude/skills'/name/'SKILL.md';b=ROOT/'.agents/skills'/name/'SKILL.md'
     if not a.is_file() or not b.is_file() or a.read_bytes()!=b.read_bytes(): errors.append('Skill mirror mismatch: '+name)
 for target in re.findall(r'`([^`]+)`',(ROOT/'CLAUDE.md').read_text()):
     if target.startswith(('personal/','/')): continue
     if not (ROOT/target).exists(): errors.append('Broken map route: '+target)
 if errors: raise SystemExit('FAIL\n'+'\n'.join(errors))
-print('PASS: required files, map routes, operating-map equality and four skill mirrors. Runtime and output quality require an actual session.')
+print('PASS: required files, map routes, operating-map equality and six skill mirrors. Runtime and output quality require an actual session.')

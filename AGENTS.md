@@ -14,6 +14,9 @@ This workspace uses MASTER: Memory, Apps, Skills, Tasks, Evaluation, Refinement.
 - Initial setup: `docs/GETTING-STARTED.md` or `/setup-workspace`.
 - Current practice goal: `brief/now.md`.
 - Sources: `assets/README.md`.
+- Memory: `/capture-context` saves private notes; `/find-context` retrieves sources.
+- Skill examples: `docs/SKILLS.md`.
+- More practice workflows: `examples/README.md`.
 - Tool access: `connections.md`. A listed app is not a tested connection.
 - Practice task: `projects/first-task/README.md`.
 - Review: `CHECK-YOUR-MASTER.md` and `templates/run-record.md`.

@@ -5,6 +5,21 @@ Your first practical workspace for Claude Code, built around the **MASTER Framew
 
 Think of an agent's desk: a filing cabinet, computer apps, a notebook, a to-do list, a progress report and coaching. This starter gives those ideas a small, editable home on your computer.
 
+## Six useful skills, ready to edit
+
+| Skill | Use it to | Get |
+| --- | --- | --- |
+| `/setup-workspace` | Explain your work and current goal | A private working brief |
+| `/capture-context` | Save a confirmed fact, preference or decision | A dated note with a source |
+| `/find-context` | Recover what you already know or decided | An answer with exact file references |
+| `/plan-one-task` | Give the agent one clear job | A saved plan or draft for review |
+| `/check-work` | Inspect the result against your requirements | Evidence-backed findings |
+| `/refine-workflow` | Teach a reusable lesson from real feedback | A focused edit and retest record |
+
+You also get **three practice workflows** (everyday planning, content creation and development), task/feedback/context templates, and a **local context-search script** that uses Python's standard library. No API key or dashboard installation is needed for the supplied exercises. Agent application/model access is separate.
+
+See [the skill examples](docs/SKILLS.md) and [the practice workflows](examples/README.md).
+
 ## Get started
 
 1. Download this repository using **Code -> Download ZIP**, or clone it:
@@ -35,7 +50,7 @@ If a skill is missing from the menu, inspect its discovery and ask the agent to 
 | --- | --- | --- |
 | Memory | Filing cabinet | Brief, source directory, saved decisions and file map |
 | Apps | Computer apps | A connection register; external apps start unconnected |
-| Skills | Notebook | Four standalone skills, mirrored for Claude Code and Codex |
+| Skills | Notebook | Six standalone skills, mirrored for Claude Code and Codex |
 | Tasks | To-do list | One fictional practice project and a run template |
 | Evaluation | Progress report | A checklist and evidence-based review skill |
 | Refinement | Coaching | A feedback template and focused improvement skill |
