@@ -1,0 +1,4 @@
+# These are the original, maintained browser application sources.
+apps/master-map/app.js linguist-generated=false linguist-vendored=false linguist-detectable=true
+apps/master-map/style.css linguist-generated=false linguist-vendored=false linguist-detectable=true
+apps/master-map/index.html linguist-generated=false linguist-vendored=false linguist-detectable=true
