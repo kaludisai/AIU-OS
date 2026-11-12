@@ -12,7 +12,10 @@ def allowed(path,root):
 def search(query,scopes,root=ROOT,limit=20):
     root=root.resolve();found=[];seen=set()
     for scope in scopes:
-        base=(root/scope).resolve()
+        candidate=root/scope
+        if any(p.is_symlink() for p in [candidate,*candidate.parents] if p!=root and root in p.parents):
+            raise ValueError('Search scopes cannot traverse symlinks.')
+        base=candidate.resolve()
         if not allowed(base,root): raise ValueError('Search scope must stay inside the workspace and avoid restricted names.')
         if not base.exists(): continue
         files=[base] if base.is_file() else sorted(base.rglob('*'))

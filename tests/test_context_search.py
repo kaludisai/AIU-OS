@@ -24,5 +24,6 @@ class SearchChecks(unittest.TestCase):
         (self.root/'assets/passwords.md').write_text('Vegetarian secret')
         (self.root/'assets/link.md').symlink_to(self.root/'personal/notes.md')
         self.assertEqual(module.search('vegetarian',['assets'],self.root),[])
+        with self.assertRaises(ValueError):module.search('vegetarian',['assets/link.md'],self.root)
     def test_literal_not_regex(self):self.assertEqual(module.search('.*',['brief'],self.root),[])
 if __name__=='__main__':unittest.main(verbosity=2)
