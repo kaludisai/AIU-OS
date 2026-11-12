@@ -20,7 +20,11 @@ You also get **three practice workflows** (everyday planning, content creation a
 
 See [the skill examples](docs/SKILLS.md) and [the practice workflows](examples/README.md).
 
-## Get started
+## Start with one prompt
+
+Open the [install guide](docs/GETTING-STARTED.md#copy-this-prompt), copy the full prompt, and give it to Claude Code or Codex with local file access. Your agent sets up a new folder and starts the personalization interview.
+
+## Manual setup and optional first workflow
 
 1. Download this repository using **Code -> Download ZIP**, or clone it:
 
