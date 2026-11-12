@@ -1,4 +1,5 @@
-# These are the original, maintained browser application sources.
+# Original maintained browser sources, not compiled bundles or vendored libraries.
+# Keep their real languages detectable in repository statistics.
 apps/master-map/app.js linguist-generated=false linguist-vendored=false linguist-detectable=true
 apps/master-map/style.css linguist-generated=false linguist-vendored=false linguist-detectable=true
 apps/master-map/index.html linguist-generated=false linguist-vendored=false linguist-detectable=true
