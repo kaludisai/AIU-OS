@@ -1,86 +1,120 @@
-# AIU-OS
+# AIU-OS: Your AI Operating System for Claude Code and Codex
 
-Your first practical workspace for Claude Code, built around the **MASTER Framework**:
-**Memory, Apps, Skills, Tasks, Evaluation, Refinement.**
+[![License: MIT](https://img.shields.io/badge/License-MIT-A51C30.svg)](LICENSE)
 
-Think of an agent's desk: a filing cabinet, computer apps, a notebook, a to-do list, a progress report and coaching. This starter gives those ideas a small, editable home on your computer.
+A free, **MIT-licensed starter kit** for building your own AI workspace with Claude Code or Codex. Keep your context, projects and repeatable methods in one place, using the **MASTER Framework**: Memory, Apps, Skills, Tasks, Evaluation, Refinement.
 
-## Six useful skills, ready to edit
+Made for anyone learning to work with AI agents: creators, business owners, teams, developers and complete beginners. You do not need to know Python or JavaScript to use the core workspace.
 
-| Skill | Use it to | Get |
-| --- | --- | --- |
-| `/setup-workspace` | Explain your work and current goal | A private working brief |
-| `/capture-context` | Save a confirmed fact, preference or decision | A dated note with a source |
-| `/find-context` | Recover what you already know or decided | An answer with exact file references |
-| `/plan-one-task` | Give the agent one clear job | A saved plan or draft for review |
-| `/check-work` | Inspect the result against your requirements | Evidence-backed findings |
-| `/refine-workflow` | Teach a reusable lesson from real feedback | A focused edit and retest record |
-
-You also get **three practice workflows** (everyday planning, content creation and development), task/feedback/context templates, and a **local context-search script** that uses Python's standard library. No API key or dashboard installation is needed for the supplied exercises. Agent application/model access is separate.
-
-See [the skill examples](docs/SKILLS.md) and [the practice workflows](examples/README.md).
+**AIU-OS** stands for **AI University OS**. It is the free companion to the AI University MASTER lesson. [Join the free AI University Discord](https://discord.gg/DUZwXQzfAe) for the lesson resources and community.
 
 ## Start with one prompt
 
-Open the [install guide](docs/GETTING-STARTED.md#copy-this-prompt), copy the full prompt, and give it to Claude Code or Codex with local file access. Your agent sets up a new folder and starts the personalization interview.
+Open the **[install guide](docs/GETTING-STARTED.md#copy-this-prompt)**, copy the full prompt, and give it to Claude Code or Codex with local file access. Your agent creates a new workspace and starts a short interview about your work and goals.
 
-## Manual setup and optional first workflow
+Your own agent application and model access are separate. No API key, package install or external account connection is required by the supplied workspace exercises.
 
-1. Download this repository using **Code -> Download ZIP**, or clone it:
+## See how your workspace fits together
 
-   ```bash
-   git clone https://github.com/kaludisai/AIU-OS.git
-   cd AIU-OS
-   ```
+[![Explore the AIU-OS MASTER map in 3D](docs/media/master-map-preview.gif)](https://github.com/kaludisai/AIU-OS/raw/refs/heads/main/docs/media/master-map-demo.mp4)
 
-2. Open the extracted **AIU-OS folder** as a local Claude Code workspace. Keep the hidden `.claude` and `.agents` folders.
-3. Run `/setup-workspace`. It asks a short interview and saves your answers in the gitignored `personal/` folder. You can also keep the fictional dinner example and skip personalization.
-4. Ask Claude to read the operating map and identify the current goal, sources and unknowns.
-5. Try one task:
+**[Watch or download the 3D demo](https://github.com/kaludisai/AIU-OS/raw/refs/heads/main/docs/media/master-map-demo.mp4)** · **[Open the map locally](apps/master-map/README.md)**
 
-   ```text
-   /plan-one-task Use the fictional birthday-dinner example. Read brief/now.md and projects/first-task/README.md. Save a review draft in projects/first-task/output.md. Do not buy or book anything.
-   ```
+The original AIU MASTER Map shows the six pillars around your workspace. Rotate the map, select a pillar, search its files, and open the relevant source. **Play tour** walks through the included public starter. It uses fictional practice data; it is a map of this kit, not a recording of a private workspace.
 
-6. Run `/check-work` with the saved output path. Review it yourself.
-7. If you want a lasting change, run `/refine-workflow`, approve one focused update, and test the affected case again.
-8. Start a fresh chat in this folder. Ask it to locate your draft, accepted decisions and next action.
+Download AIU-OS, then open `apps/master-map/index.html` in your browser. The map runs locally without a server, account, package install or external library. It does not automatically scan your computer or import personal notes.
 
-If a skill is missing from the menu, inspect its discovery and ask the agent to read its exact SKILL.md file. A file existing on disk does not prove a host loaded it. This walkthrough targets local Claude Code. Codex entries and the matching AGENTS.md are included; verify discovery in your own version. No hosted/cloud compatibility is promised.
+## What you get: six ready-to-use skills
 
-## What's included
-
-| MASTER | Desk object | Files |
+| Skill | When to use it | What it produces |
 | --- | --- | --- |
-| Memory | Filing cabinet | Brief, source directory, saved decisions and file map |
-| Apps | Computer apps | A connection register; external apps start unconnected |
-| Skills | Notebook | Six standalone skills, mirrored for Claude Code and Codex |
-| Tasks | To-do list | One fictional practice project and a run template |
-| Evaluation | Progress report | A checklist and evidence-based review skill |
-| Refinement | Coaching | A feedback template and focused improvement skill |
+| **setup-workspace** | Your first session | A short interview and a private brief about your work, goals and preferences |
+| **capture-context** | Something is worth remembering | A dated note with the source and status, plus an index so it can be found again |
+| **find-context** | You need a fact or previous decision | An answer grounded in your files, with conflicts and unknowns called out |
+| **plan-one-task** | You have a job to get done | A saved plan or draft with the relevant inputs, constraints and next action |
+| **check-work** | You want to review an output | A check against your requirements, with specific evidence and suggested fixes |
+| **refine-workflow** | You have useful feedback | One focused change to the relevant context or method, followed by a retest when available |
+
+In **Claude Code**, use `/setup-workspace`, `/capture-context`, `/find-context`, `/plan-one-task`, `/check-work` or `/refine-workflow`. In **Codex**, use the skill picker or select the matching `$skill-name`. Both host folders are included. [See examples and discovery help](docs/SKILLS.md).
+
+## The MASTER Framework
+
+| Pillar | The question it answers | At your agent's desk |
+| --- | --- | --- |
+| **Memory** | What should it know about you and the work? | The filing cabinet |
+| **Apps** | Which tools can it actually use? | The computer apps |
+| **Skills** | How do you want this job done? | The notebook |
+| **Tasks** | What needs to happen now? | The to-do list |
+| **Evaluation** | Did the result meet your requirements? | The progress report |
+| **Refinement** | What should change next time? | The coaching |
+
+The first three equip the agent. The last three put it to work, check the result and improve the next run. [Read the framework guide](docs/MASTER.md).
 
 ![The MASTER desk](docs/master-desk.svg)
 
-The kit uses ordinary Markdown files and Python 3 for optional structural checks. No packages, API key, hosted server or dashboard installation are required by the kit. Your agent application and model access are separate.
+## How you know it is useful
 
-## Quick structural check
+- **You explain yourself less.** A new conversation finds your current brief and relevant project files instead of needing the whole backstory again.
+- **You can pick up where you left off.** The output, accepted decisions and next action are saved somewhere you can open.
+- **Your corrections carry forward.** Feedback changes the relevant note or method, and the next result can be checked against it.
+
+Start with one real task. Add context, tools and methods as the work needs them. External apps begin unconnected, and nothing is scheduled by this kit.
+
+## Your files stay with you
+
+Your context and methods are ordinary local files. You can edit them, back them up, move them to another computer and use them with a compatible agent. AIU-OS includes `CLAUDE.md`, `AGENTS.md` and matching skill folders for Claude Code and Codex.
+
+The useful context you build can carry forward as models change. A new agent may need a different instruction format or its own app connections. [Read the privacy and workspace guide](docs/PRIVACY.md).
+
+## Included practice and templates
+
+Three fictional exercises help you try the process before adding your own information:
+
+- **Everyday planning:** a dinner plan with a budget and dietary requirements.
+- **Content creation:** a short beginner explainer from supplied source notes.
+- **Development:** a small feature plan with observable acceptance criteria.
+
+[Choose an exercise](examples/README.md), or start with your own project. Templates cover a task brief, context note, run record and coaching note. Personalization goes in the Git-ignored `personal/` folder.
+
+## Repository layout
+
+```text
+AIU-OS/
+├── CLAUDE.md / AGENTS.md       Your agent's operating map
+├── brief/                     Fictional practice brief
+├── assets/                    Source notes and index
+├── projects/                  Work and project requirements
+├── examples/                  Three optional practice workflows
+├── templates/                 Context, task, review and feedback records
+├── connections.md             App access and test register
+├── .claude/skills/             Six Claude Code methods
+├── .agents/skills/             Matching Codex methods
+├── apps/master-map/            Local interactive 3D starter map
+├── scripts/                    Optional local search and file checks
+├── tests/                      Context-search checks
+├── docs/                       Setup, framework, skills and privacy
+└── LICENSE                    MIT
+```
+
+`personal/` is created when you personalize the kit and stays local by default. Review files before sharing your own copy.
+
+## Optional checks
 
 ```bash
 python3 scripts/check_workspace.py
+python3 tests/test_context_search.py
+python3 scripts/find_context.py vegetarian
 ```
 
-This checks required files, local routes and matching mirrors. It does not certify output quality, privacy of future edits or live app access. Use [the actual-run checklist](CHECK-YOUR-MASTER.md) for that.
+Python 3 is needed only for these optional utilities. The skills are editable Markdown, and the 3D map uses HTML, CSS and JavaScript. The file check verifies structure and matching maps; a real task tells you whether the work is useful.
 
-## Resources
+## Links
 
+- [One-prompt install guide](docs/GETTING-STARTED.md#copy-this-prompt)
+- [Six skill examples](docs/SKILLS.md)
 - [MASTER framework](docs/MASTER.md)
-- [Step-by-step setup](docs/GETTING-STARTED.md)
-- [Privacy and public/private boundaries](docs/PRIVACY.md)
-- [Official Claude memory docs](https://code.claude.com/docs/en/memory)
-- [Official Claude skill docs](https://code.claude.com/docs/en/skills)
-- [Join the free AI University Discord](https://discord.gg/DUZwXQzfAe)
+- [Free AI University Discord](https://discord.gg/DUZwXQzfAe)
 
-## Open source
+## License
 
-MIT license for this repository's original starter code, documentation and diagram. No personal workspace, credentials, private data, purchased RUBRIC code or licensed presentation-template source is included. The slide deck used to teach the lesson is a separate presentation artifact, not part of this software kit.
-
+**[MIT License](LICENSE). Copyright (c) 2026 AI University.** Use, modify and share this starter under the terms in the license. Bundled fonts retain their SIL Open Font Licenses in `apps/master-map/fonts/`.
