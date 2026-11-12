@@ -1,0 +1,13 @@
+# Private personalization
+personal/
+private/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+.claude/settings.local.json
+projects/**/output*.md
+projects/**/run-*.md
+__pycache__/
