@@ -11,4 +11,4 @@ This is an interactive map of the public starter, using its fictional inputs and
 
 Keyboard users can select pillars with the buttons, search, and follow file links. Reset view restores the initial camera. For narrow windows the detail panel moves below the map.
 
-Original application code and graphics: MIT, copyright 2026 AI University. Bundled Outfit and Doto fonts retain the SIL Open Font License; see fonts/OFL-Outfit.txt and fonts/OFL-Doto.txt.
+Original application code and graphics: MIT, copyright 2026 Kaludis. Bundled Outfit and Doto fonts retain the SIL Open Font License; see fonts/OFL-Outfit.txt and fonts/OFL-Doto.txt.
