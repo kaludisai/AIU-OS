@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <title>AI University · Second Brain</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <a class="brand" href="../../README.md" aria-label="AIU-OS home"
+          ><img
+            class="brand-shield"
+            src="shield.png"
+            alt="AI University shield"
+        /><span>AI UNIVERSITY<small>YOUR LOCAL WORKSPACE</small></span></a>
+        <div class="top-center">
+          <span class="status-dot"></span> Local files. Your knowledge.
+        </div>
+        <div class="top-actions">
+          <button id="save-browser" class="quiet">Save in browser</button
+          ><button id="export" class="quiet">Export library ↗</button
+          ><button id="import" class="primary">
+            Import notes <span>＋</span>
+          </button>
+        </div>
+      </header>
+      <main class="workspace">
+        <aside class="library">
+          <div class="library-heading">
+            <h2>Library</h2>
+            <button id="new-note" class="icon-button" aria-label="Create note">
+              ＋
+            </button>
+          </div>
+          <label class="search-box"
+            ><span>⌕</span
+            ><input
+              id="search"
+              type="search"
+              aria-label="Search notes"
+              placeholder="Search your knowledge…"
+              autocomplete="off"
+            /><kbd>/</kbd></label
+          >
+          <div id="library-summary" class="summary"></div>
+          <div id="groups" class="groups" aria-label="Filter by folder"></div>
+          <div class="list-heading">
+            <span id="result-label">ALL NOTES</span
+            ><span id="result-count"></span>
+          </div>
+          <nav id="notes" aria-label="Notes"></nav>
+          <div class="library-bottom">
+            <span id="storage-status">Fictional demo · not saved</span>
+            <div>
+              <button id="demo" class="text-button">Load demo</button
+              ><button id="clear" class="text-button">Clear library</button>
+            </div>
+          </div>
+        </aside>
+        <section class="graph-panel" aria-label="Knowledge graph">
+          <div class="graph-heading">
+            <div>
+              <div class="eyebrow">AIU-OS / MEMORY</div>
+              <h1>Your second <em>brain</em></h1>
+              <p id="graph-subtitle">Your ideas, connected.</p>
+            </div>
+            <span id="mode-badge" class="badge">FICTIONAL DEMO</span>
+          </div>
+          <canvas
+            id="graph"
+            role="img"
+            aria-label="Interactive 3D graph of linked Markdown notes. Use the note list to open any note with the keyboard."
+          ></canvas>
+          <div id="graph-empty" hidden>
+            <h2>Your knowledge starts here.</h2>
+            <p>Import a folder of Markdown notes or create your first note.</p>
+          </div>
+          <div id="hover-label" class="hover-label" hidden></div>
+          <div class="graph-bottom">
+            <span
+              >Drag to orbit <i>·</i> Scroll to zoom <i>·</i> Click to
+              explore</span
+            >
+            <div class="graph-controls">
+              <button id="rotate" aria-pressed="false">↻ Orbit</button
+              ><button id="reset">⊙ Reset</button
+              ><button id="focus-view" aria-pressed="false">⛶ Focus</button>
+            </div>
+          </div>
+        </section>
+        <aside class="reader" aria-label="Note reader">
+          <div class="reader-top">
+            <span id="note-group" class="eyebrow">START HERE</span>
+            <div>
+              <button
+                id="edit-note"
+                class="icon-button"
+                aria-label="Edit note"
+                disabled
+              >
+                ✎</button
+              ><button
+                id="download-note"
+                class="icon-button"
+                aria-label="Download note"
+                disabled
+              >
+                ↓
+              </button>
+            </div>
+          </div>
+          <div id="note-content" class="note-content"></div>
+          <section class="connections">
+            <div class="section-label">
+              LINKS FROM THIS NOTE <span id="outgoing-count">0</span>
+            </div>
+            <div id="outgoing"></div>
+            <div class="section-label backlinks-label">
+              BACKLINKS <span id="backlink-count">0</span>
+            </div>
+            <div id="backlinks"></div>
+          </section>
+          <div id="note-path" class="note-path"></div>
+        </aside>
+      </main>
+      <footer>
+        <span
+          ><b>MASTER</b> Memory · Apps · Skills · Tasks · Evaluation ·
+          Refinement</span
+        ><span id="save-hint"
+          >Imported files stay on this device. No uploads.</span
+        >
+      </footer>
+    </div>
+    <dialog id="import-dialog">
+      <form method="dialog">
+        <div class="dialog-heading">
+          <h2>Bring in your <em>knowledge</em></h2>
+          <button class="icon-button" aria-label="Close import">×</button>
+        </div>
+        <p>
+          Choose Markdown files or a folder. The app reads only what you select.
+          Your files stay in your browser; there is no upload.
+        </p>
+        <div class="import-options">
+          <button type="button" id="choose-folder">
+            ▱<strong>Import a folder</strong
+            ><span>Keep your folders and [[links]]</span></button
+          ><button type="button" id="choose-files">
+            ▤<strong>Choose files</strong
+            ><span>Markdown or AIU library backup</span>
+          </button>
+        </div>
+        <p class="fine-print">
+          Import replaces the current view. Export your library first to keep
+          changes. Up to 500 notes · 256 KB each · 8 MB total. Hidden, private
+          and dependency folders are skipped. Imported links never run code.
+        </p>
+        <div id="import-report" role="status"></div>
+      </form>
+    </dialog>
+    <input id="folder-input" type="file" webkitdirectory multiple hidden />
+    <input
+      id="file-input"
+      type="file"
+      accept=".md,.markdown,.json"
+      multiple
+      hidden
+    />
+    <dialog id="editor-dialog">
+      <form id="editor">
+        <div class="dialog-heading">
+          <h2 id="editor-heading">Edit <em>note</em></h2>
+          <button
+            type="button"
+            id="close-editor"
+            class="icon-button"
+            aria-label="Close editor"
+          >
+            ×
+          </button>
+        </div>
+        <label for="edit-path">File path</label
+        ><input
+          id="edit-path"
+          required
+          placeholder="Memory/My first note.md"
+        /><label for="edit-body">Markdown</label
+        ><textarea
+          id="edit-body"
+          required
+          spellcheck="false"
+          placeholder="# My first note&#10;&#10;Connect it with [[Another note]]."
+        ></textarea>
+        <p class="fine-print">
+          Changes update this view. Export to keep a portable backup; Save in
+          browser stores a local snapshot. Your original files are never
+          overwritten.
+        </p>
+        <div id="editor-error" role="alert"></div>
+        <button class="primary" type="submit">Save note</button>
+      </form>
+    </dialog>
+    <div id="toast" role="status" hidden></div>
+    <div id="demo-cursor" aria-hidden="true" hidden>
+      <svg viewBox="0 0 32 40">
+        <path
+          d="M3 2V31L11 24L17 37L23 34L17 21H29Z"
+          fill="#FBF7F0"
+          stroke="#1E1B1B"
+          stroke-width="2"
+        />
+      </svg>
+    </div>
+    <script src="knowledge.js"></script>
+    <script src="demo.js"></script>
+    <script src="graph.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

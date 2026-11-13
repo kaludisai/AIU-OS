@@ -14,15 +14,23 @@ Open the **[install guide](docs/GETTING-STARTED.md#copy-this-prompt)**, copy the
 
 Your own agent application and model access are separate. No API key, package install or external account connection is required by the supplied workspace exercises.
 
-## See how your workspace fits together
+## Your local second brain
 
-[![Explore the AIU-OS MASTER map in 3D](docs/media/master-map-preview.gif)](https://github.com/kaludisai/AIU-OS/raw/refs/heads/main/docs/media/master-map-demo.mp4)
+[![Explore the AI University Second Brain](docs/media/second-brain-preview.gif)](https://github.com/kaludisai/AIU-OS/raw/refs/heads/main/docs/media/second-brain-demo.mp4)
 
-**[Watch or download the 3D demo](https://github.com/kaludisai/AIU-OS/raw/refs/heads/main/docs/media/master-map-demo.mp4)** · **[Open the map locally](apps/master-map/README.md)**
+**[Watch the demo](https://github.com/kaludisai/AIU-OS/raw/refs/heads/main/docs/media/second-brain-demo.mp4)** · **[Open the Second Brain](apps/second-brain/README.md)**
 
-The original AIU MASTER Map shows the six pillars around your workspace. Rotate the map, select a pillar, search its files, and open the relevant source. **Play tour** walks through the included public starter. It uses fictional practice data; it is a map of this kit, not a recording of a private workspace.
+A visual home for your Markdown notes. Import a folder, explore its connections in 3D, search what you know, and open the notes behind each connection.
 
-Download AIU-OS, then open `apps/master-map/index.html` in your browser. The map runs locally without a server, account, package install or external library. It does not automatically scan your computer or import personal notes.
+- **A graph built from your notes.** Every node is a Markdown file. Connections come from `[[wikilinks]]` and relative Markdown links.
+- **Search and backlinks.** Find words across your notes, filter by folder, and follow the notes that reference an idea.
+- **Create and edit.** Write Markdown, connect ideas and download an individual note.
+- **Portable backups.** Export the library, import it on another computer, or explicitly save a snapshot in this browser.
+- **Local by default.** No server, account, package install, API key or uploads. You choose which files it reads.
+
+Download AIU-OS and double-click `apps/second-brain/index.html`. The included **67-note fictional demo** lets you try it immediately. Import your own Markdown to replace it. Changes update the app's view; export or save to keep them. Original files are never overwritten. [Usage, limits and privacy](apps/second-brain/README.md).
+
+The lightweight [MASTER framework map](apps/master-map/README.md) is also included if you want a quick overview of the six pillars.
 
 ## What you get: six ready-to-use skills
 
@@ -89,7 +97,8 @@ AIU-OS/
 ├── connections.md             App access and test register
 ├── .claude/skills/             Six Claude Code methods
 ├── .agents/skills/             Matching Codex methods
-├── apps/master-map/            Local interactive 3D starter map
+├── apps/second-brain/          Local notes, search, backlinks and 3D graph
+├── apps/master-map/            Optional MASTER framework overview
 ├── scripts/                    Optional local search and file checks
 ├── tests/                      Context-search checks
 ├── docs/                       Setup, framework, skills and privacy
@@ -106,7 +115,7 @@ python3 tests/test_context_search.py
 python3 scripts/find_context.py vegetarian
 ```
 
-Python 3 is needed only for these optional utilities. The skills are editable Markdown, and the 3D map uses HTML, CSS and JavaScript. The file check verifies structure and matching maps; a real task tells you whether the work is useful.
+Python 3 is needed only for these optional utilities. The skills are editable Markdown; the Second Brain and framework map use readable HTML, CSS and JavaScript. Run `node tests/test_second_brain.cjs` to check the Second Brain data model (optional Node.js). The file check verifies structure and matching maps; a real task tells you whether the work is useful.
 
 ## Links
 

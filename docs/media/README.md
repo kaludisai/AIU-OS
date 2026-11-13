@@ -1,5 +1,5 @@
-# AIU MASTER Map demo
+# AI University app demos
 
-Original AI University map and recording, November 12, 2026. The 20-second silent MP4 and looping GIF show the included public starter map, using its fictional sources and actual file paths. No personal workspace, AI output or external connection is shown.
+The Second Brain demo shows the actual included app with its clearly labeled fictional Markdown library. All counts and connections are calculated from those notes. It opens notes, searches, follows a backlink, shows import choices and orbits the graph. No personal files, account connections or AI-generated answers are shown.
 
-Source: apps/master-map/. Open the app locally and use Play tour to see the same sequence. The video renders the app's deterministic tour with its pointer and selections. Original code and graphics are MIT; bundled fonts retain their OFL files.
+The older MASTER Map recording illustrates the framework overview. Both apps run locally from their included HTML entry.

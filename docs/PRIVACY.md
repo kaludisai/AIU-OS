@@ -1,6 +1,6 @@
 # Keep the template public and your work private
 
-This repository contains fictional inputs and independently authored starter files. It does not contain the creator's private operating system.
+This repository contains fictional inputs and starter files. It does not contain the creator's private operating system.
 
 Personalization goes into `personal/`, ignored by Git. Practice outputs and local settings are also ignored. Gitignore is a convenience, not a security boundary or a retroactive removal tool. Review staged files before any push. A fork starts public unless you deliberately choose otherwise; cloning a public repository does not publish your local edits by itself.
 

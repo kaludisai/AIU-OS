@@ -31,3 +31,9 @@ Choose **Code > Download ZIP** on [GitHub](https://github.com/kaludisai/AIU-OS),
 ## Optional practice
 
 The [three fictional exercises](../examples/README.md) are there if you want them. For the dinner fixture, explicitly choose `brief/now.md` and `projects/first-task/README.md`; for creator or developer work, name the relevant example. No practice walkthrough is required to install the workspace.
+
+## Explore your notes
+
+Open `apps/second-brain/index.html` in your browser to try the local Second Brain. Start with the clearly labeled fictional demo, or choose **Import notes** to select your own Markdown folder. There is no app install or account connection.
+
+Search notes, follow links and backlinks, and edit Markdown in the viewer. Original files are never overwritten. Export your library or explicitly save a browser snapshot to keep changes. See [Second Brain usage and privacy](../apps/second-brain/README.md).
