@@ -8,7 +8,7 @@ For anyone learning to work with AI agents: creators, business owners, teams, de
 
 The kit starts with a short **setup-workspace** interview. Use **capture-context** to save useful information, **find-context** to retrieve it, **plan-one-task** to turn a goal into work, **check-work** to review the result, and **refine-workflow** to improve the next run. The included **Second Brain** lets you explore linked notes in 3D.
 
-**AIU-OS** stands for **AI University OS**. The kit works for anyone; it is the free companion to the MASTER masterclass and the [AI University Discord](https://discord.gg/DUZwXQzfAe).
+**AIU-OS** stands for **AI University OS**. The kit works for anyone; it pairs with a companion masterclass video and the [AI University Discord](https://discord.gg/DUZwXQzfAe).
 
 ## The test
 
